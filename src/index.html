@@ -5,14 +5,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
     <script src="./index.bundle.js" type="module"></script>
     <title>Document</title>
 </head>
 
 <body>
-
+    <div class="leaderboard">
+        <header class="header">
+            <p class="titre">A web Page</p>
+            <section class="header-section">
+                <div class="header-content">
+                    <h2 class="linter">linter</h2>
+                    <div class="set-icon">
+                        <ul class="prev-next">
+                            <li class="prev"><i class="fa-solid fa-circle-arrow-left"></i>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-arrow-right"></i></li>
+                        </ul>
+                        <p class="x-icon"><i class="fa-solid fa-x"></i></p>
+                        <p class="home-icon"><i class="fa-solid fa-house"></i></p>
+                    </div>
+                    <div class="col-input">
+                        <input type="text" placeholder="https//" class="link-tex">
+                        <ul class="search">
+                            <li class="search-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </li>
+                            <li class="text">
+                                <input class="search-input" type="text">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <section class="body-leader">
+            <h1 class="title-body">Leaderboard</h1>
+            <div class="score-content">
+                <section class="recent-score">
+                    <div class="title-recent">
+                        <h2>Recent Score</h2>
+                        <button class="refresh" type="button"><i class="fa-solid fa-rotate"></i>
+                        <span class="tooltiptext">Refresh</span></button>
+                    </div>
+                    <ul class="list-score">
+                        <li class="impair-list">Name: 112</li>
+                        <li class="pair-list">Name: 323</li>
+                        <li class="impair-list">Name: 100</li>
+                    </ul>
+                </section>
+                <section class="add-score">
+                    <h2>Add your score</h2>
+                    <form class="form">
+                        <p class="name">
+                            <input type="text" class="name-in" placeholder="Your name">
+                        </p>
+                        <p class="score">
+                            <input type="text" class="score-in" placeholder="Your score">
+                        </p>
+                        <button type="button" class="btn">Submit</button>
+                    </form>
+                </section>
+            </div>
+        </section>
+        <footer class="footer">
+            <i class="fa-solid fa-lines-leaning"></i>
+        </footer>
+    </div>
 </body>
 
 </html>
