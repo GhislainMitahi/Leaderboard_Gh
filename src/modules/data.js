@@ -4,7 +4,7 @@ const data = [
   },
   {
     name: 130,
-  }
+  },
 ];
 
 module.exports = data;
