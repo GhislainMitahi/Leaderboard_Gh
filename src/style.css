@@ -260,4 +260,5 @@ body {
 .impair-list,
 .pair-list {
   padding: 5px;
+  width: 100%;
 }
