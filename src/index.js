@@ -7,18 +7,20 @@ const btn = document.getElementById('btn');
 const refresh = document.getElementById('refresh');
 const list = document.getElementById('list-score');
 
-refresh.addEventListener('click', () => window.location.reload());
+refresh.addEventListener('click', () => document.location.reload());
 
 btn.addEventListener('click', (e) => {
-   e.preventDefault();
-  newGame(name, scores);
+  e.preventDefault();
+  newGame(name.value, scores.value);
+  name.value = '';
+  scores.value = '';
 });
 
 const results = getData();
 
 results.then((res) => {
   const array = res.result;
-  array.forEach((arr) => {
+  array.map((arr) => {
     const li = document.createElement('li');
     const id = array.indexOf(arr);
 
@@ -30,6 +32,6 @@ results.then((res) => {
 
     li.innerHTML = `${arr.user} : ${arr.score}`;
 
-    list.append(li);
+    return list.append(li);
   });
 });

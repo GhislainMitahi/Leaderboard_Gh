@@ -1,25 +1,26 @@
 const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
-const Id = 'Zl4d7IVkemOTTVg2fUdz';
+const id = 'hVgIHhMGKjMiPzLiECktA';
 
-const newGame = async (name, scores) => {
-  await fetch(`${url}games/${Id}/scores/`, {
+const getData = async () => {
+  const result$ = await fetch(`${url}games/${id}/scores/`);
+  const res = await result$.json();
+
+  return res;
+};
+
+const newGame = async (users, scores) => {
+  const postData = await fetch(`${url}games/${id}/scores/`, {
     method: 'POST',
     body: JSON.stringify({
-      user: name.value,
-      score: scores.value,
+      user: users,
+      score: scores,
     }),
     headers: {
       'content-type': 'Application/json; charset=UTF-8',
     },
-  }).then((Response) => Response.json());
-  name.value = '';
-  scores.value = '';
-};
-
-const getData = async () => {
-  const result$ = await fetch(`${url}games/${Id}/scores/`);
-  const res = await result$.json();
-  return res;
+  });
+  const response = await postData.json();
+  return response;
 };
 
 export { newGame, getData };
