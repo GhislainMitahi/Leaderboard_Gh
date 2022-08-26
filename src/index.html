@@ -48,7 +48,7 @@
                 <section class="recent-score">
                     <div class="title-recent">
                         <h2>Recent Score</h2>
-                        <button class="refresh" type="button"><i class="fa-solid fa-rotate"></i>
+                        <button id="refresh" class="refresh" type="button"><i class="fa-solid fa-rotate"></i>
                         <span class="tooltiptext">Refresh</span></button>
                     </div>
                     <ul id="list-score" class="list-score">
@@ -58,12 +58,12 @@
                     <h2>Add your score</h2>
                     <form class="form">
                         <p class="name">
-                            <input type="text" class="name-in" placeholder="Your name">
+                            <input type="text" class="name-in" placeholder="Your name" id="name">
                         </p>
                         <p class="score">
-                            <input type="text" class="score-in" placeholder="Your score">
+                            <input type="text" class="score-in" placeholder="Your score" id="score">
                         </p>
-                        <button type="button" class="btn">Submit</button>
+                        <button type="button" class="btn" id="btn">Submit</button>
                     </form>
                 </section>
             </div>
