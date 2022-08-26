@@ -47,19 +47,6 @@ body {
   display: none;
 }
 
-.refresh:hover .tooltiptext {
-  display: flex;
-  position: absolute;
-  top: 310px;
-  left: 710px;
-  z-index: 10;
-  color: #fff;
-  background: gray;
-  padding: 3px;
-  border-radius: 10px;
-  word-spacing: 2px;
-}
-
 .fa-rotate {
   font-size: 1rem;
   color: rgb(45, 45, 45);
