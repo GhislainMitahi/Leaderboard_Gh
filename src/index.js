@@ -17,21 +17,14 @@ btn.addEventListener('click', (e) => {
 });
 
 const results = getData();
-
 results.then((res) => {
+  list.innerHTML = ' ';
   const array = res.result;
   array.map((arr) => {
-    const li = document.createElement('li');
-    const id = array.indexOf(arr);
-
-    if (id % 2 === 0) {
-      li.classList.add('pair-list');
-    } else {
-      li.classList.add('impair-list');
-    }
-
-    li.innerHTML = `${arr.user} : ${arr.score}`;
-
-    return list.append(li);
+    const index = array.indexOf(arr);
+    list.innerHTML += `
+    <li class = "${index % 2 ? 'pair-list' : 'impair-list'}"> ${arr.user} : ${arr.score}</li>
+    `;
+    return arr;
   });
 });
