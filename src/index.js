@@ -1,4 +1,4 @@
-import { newGame, getData } from './modules/Data.js';
+import { newGame, getData } from './modules/data.js';
 import './style.css';
 
 const name = document.getElementById('name');
