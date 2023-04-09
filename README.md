@@ -6,7 +6,7 @@ This project is about to give us a handle as a student on how to make interactiv
 
 ## Live demo
 
-https://ghislainmitahi.github.io/Leaderboard_Gh/
+https://ghislainmitahi.github.io/Leaderboard_Gh/dist/index
 
 ## Built With
 
